@@ -1,142 +1,121 @@
 ![Project Overview](Project%20Overview.png)
 
 
-# Customer-Behavior-Analysis-Python-SQL-Power-BI-demonstration-
-Analysis of customer shopping behavior using SQL, Python, and Power BI to clean data, uncover insights, and build clear, interactive visualizations.
----
-
-# Data Analytics Project – End-to-End Analysis & Dashboarding
+# Customer Behavior Analysis — End-to-End Data Pipeline (Python, SQL, Power BI)
 
 ## Overview
 
-This project demonstrates an end-to-end data analytics workflow, covering data extraction, analysis, cleaning, querying, visualization, and reporting. It showcases practical skills commonly required for data analyst roles, including Python-based analysis, SQL querying, and business intelligence dashboard creation.
+This project implements a complete end-to-end data analytics pipeline to analyze customer shopping behavior. Raw transactional data is cleaned and transformed using Python, loaded into a PostgreSQL database, analyzed using SQL, and visualized through an interactive Power BI dashboard.
 
-The goal of the project is to transform raw data into meaningful insights and present them through interactive dashboards and professional reports.
+The project was enhanced by refactoring the data processing logic into an object-oriented Python pipeline. This design improves maintainability, scalability, and reusability compared to a procedural script, and more closely reflects real-world data engineering practices.
 
 ---
 
 ## Dataset
 
-* Source: *(Add source name or “Public / Synthetic Dataset”)*
-* Format: CSV / Excel / Database table
-* Size: *(Optional)*
-* Description:
-  The dataset contains structured data used to analyze trends, patterns, and key performance indicators relevant to the business problem.
+- Source: Public / Synthetic retail dataset  
+- Format: CSV  
+- Description: Customer transactions including purchase amounts, product categories, review ratings, age, and purchase frequency  
+
+The dataset contains common real-world issues such as missing values, inconsistent formatting, and redundant columns.
 
 ---
 
 ## Tools & Technologies
 
-* **Python** (Pandas, NumPy, Matplotlib, Seaborn)
-* **SQL** (PostgreSQL / MySQL / SQL Server)
-* **Power BI** (Data modeling & dashboarding)
-* **Gamma** (Presentation creation)
-* **Jupyter Notebook**
-* **Git & GitHub**
+- Python (Pandas, NumPy, SQLAlchemy)
+- SQL (PostgreSQL)
+- Power BI (Data modeling, DAX, interactive dashboards)
+- Jupyter Notebook
+- Git & GitHub
 
 ---
 
-## Project Steps
+## Data Pipeline Architecture
 
-1. **Data Loading**
+- Raw CSV Data
+- Python OOP Pipeline (Cleaning & Feature Engineering)
+- PostgreSQL (Relational Storage)
+- SQL (Analysis & Validation)
+- Power BI (Visualization & Reporting)
 
-   * Imported raw data into Python using Pandas
-   * Connected to relational databases using SQL
-
-2. **Exploratory Data Analysis (EDA)**
-
-   * Analyzed data distributions and trends
-   * Identified missing values, outliers, and anomalies
-   * Generated summary statistics and visualizations
-
-3. **Data Cleaning & Preparation**
-
-   * Handled missing and inconsistent values
-   * Standardized data types and formats
-   * Created derived and calculated fields
-
-4. **SQL Analysis**
-
-   * Wrote SQL queries to filter, aggregate, and join tables
-   * Extracted insights directly from PostgreSQL/MySQL/SQL Server
-   * Validated Python analysis with SQL results
-
-5. **Dashboard Development**
-
-   * Built an interactive Power BI dashboard
-   * Designed KPIs, charts, and filters for business users
-   * Focused on clarity, usability, and storytelling
-
-6. **Reporting & Presentation**
-
-   * Created a structured analytical report
-   * Designed a professional presentation using Gamma
-   * Summarized insights and recommendations for stakeholders
 
 ---
 
-## Dashboard
+## Object-Oriented Pipeline Design
 
-The Power BI dashboard includes:
+To improve code quality and structure, the data pipeline was implemented using Object-Oriented Programming (OOP). All data processing steps are encapsulated within a dedicated pipeline class, with each transformation represented as a separate method.
 
-* Key performance indicators (KPIs)
-* Trend and comparison visualizations
-* Interactive filters and slicers
-* Clear, business-focused insights
+### Why OOP Improves the Project
 
-*(Add screenshots or a Power BI link if available)*
-
----
-
-## Results & Insights
-
-* Identified key trends and patterns in the data
-* Highlighted actionable insights supported by data
-* Demonstrated how data-driven decisions can improve outcomes
-
-*(Optional: Add 2–3 bullet points with specific insights)*
+- Encapsulates all pipeline logic within a single reusable object  
+- Improves maintainability by isolating individual transformation steps  
+- Allows easy extension of the pipeline with new features  
+- Reflects production-style ETL and data engineering workflows  
 
 ---
 
-## How to Run
+## Pipeline Responsibilities
 
-1. Clone the repository:
+The object-oriented pipeline performs the following tasks:
 
-   ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   ```
-2. Install required Python libraries:
+- Load raw CSV data  
+- Fill missing review ratings using category-level medians  
+- Standardize column names and formats  
+- Engineer new features such as customer age groups  
+- Convert purchase frequency categories into numerical day-based values  
+- Remove redundant or low-value columns  
+- Load cleaned data into PostgreSQL using SQLAlchemy  
 
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Open and run the Jupyter notebooks in order
-4. Execute SQL scripts using your preferred database
-5. Open the Power BI file to explore the dashboard
+---
+
+## Project Workflow
+
+### 1. Data Ingestion & Cleaning (Python)
+
+- Loaded raw CSV data using Pandas  
+- Cleaned and standardized data  
+- Performed feature engineering to support analysis  
+
+---
+
+### 2. Database Loading & SQL Analysis
+
+- Loaded cleaned data into PostgreSQL  
+- Wrote SQL queries using joins, aggregations, and filters  
+- Analyzed customer behavior and revenue trends  
+
+SQL outputs were cross-validated against Python results to ensure accuracy.
+
+---
+
+### 3. Dashboard Development (Power BI)
+
+- Connected Power BI directly to PostgreSQL  
+- Built an interactive dashboard with KPIs, trends, and category breakdowns  
+- Designed for non-technical stakeholders  
+
+---
+
+## Key Insights
+
+- Identified purchasing trends and high-value customer segments  
+- Highlighted top-performing product categories  
+- Demonstrated how a structured data pipeline enables reliable data-driven decisions  
 
 ---
 
 ## Project Structure
 
-```
-├── data/            # Raw and cleaned datasets
-├── notebooks/       # Python EDA and analysis
-├── sql/             # SQL queries
-├── dashboard/       # Power BI files
-├── report/          # Analytical report
-├── presentation/    # Gamma presentation
-└── README.md
-```
-
 ---
 
-## Key Skills Demonstrated
+## Skills Demonstrated
 
-* Data cleaning and EDA
-* SQL querying across multiple databases
-* Business intelligence and dashboard design
-* Analytical thinking and storytelling
-* End-to-end project execution
+- End-to-end data pipeline development  
+- Object-oriented programming for data pipelines  
+- Data cleaning and feature engineering using Python  
+- SQL-based analytical querying in PostgreSQL  
+- Business intelligence dashboard design  
 
 ---
 
